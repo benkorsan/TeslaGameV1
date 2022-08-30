@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
+    *Merhaba,Ben harley Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botu özeliğim eklenmiştir🤖*
     ${isGroup ? "" : "\n*Temel komutların listesi için /yardim*"}
 `)
 
@@ -147,7 +147,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		db.update(chatId, ch => chat)
 		if (top.length > 0) {
 			ctx.replyWithMarkdown(Degisken(`
-				*🌟 Kazananlar Sıralaması:*
+				*🌟 Kazananlar Sıralaması🕊️👣:*
 
 				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan 🎁", "puan 🎁", "puan 🎁")}`).join("\n")}
 			`))
@@ -173,7 +173,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
-		❓ Sizce bu kişi kaç yaşında
+		❓ Sizce bu kişi kaç yaşında🤔
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
@@ -433,7 +433,7 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Resmi Kanalımız 📣', url:`t.me/CanliSohbetGruplari`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -441,12 +441,12 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
+    ctx.replyWithMarkdown(`*Merhaba,Ben missHarley oyun Botu Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
         `,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Resmi Kanalımız 📣', url:`t.me/CanliSohbetGruplari`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -473,8 +473,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/husnublog'}],
-                [{text:'2) Qrup ', url:'t.me/husnublog'}],
+                [{text:'1) Qrup ', url:'t.me/CanliSohbetGruplari'}],
+                [{text:'2) Qrup ', url:'t.me/CanliSohbetGruplari'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -489,8 +489,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/husnublog'}],
-                [{text:'2) Grub', url:'t.me/husnublog'}],
+                [{text:'1) Grub', url:'t.me/CanliSohbetGruplari'}],
+                [{text:'2) Grub', url:'t.me/CanliSohbetGruplari'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
