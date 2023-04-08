@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben harley Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botu özeliğim eklenmiştir🤖*
+    *Merhaba, Yaş Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botu özeliğim eklenmiştir🤖*
     ${isGroup ? "" : "\n*Temel komutların listesi için /yardim*"}
 `)
 
@@ -179,7 +179,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 			:
 			""
 		}
-		${"◾️".repeat(time)}${"▫️".repeat(config.emojiSaniye - time)}
+		${"🟥".repeat(time)}${"🟩".repeat(config.emojiSaniye - time)}
 	`)
 }
 const OyunHusnuEhedov = (ctx, chatId) => {
